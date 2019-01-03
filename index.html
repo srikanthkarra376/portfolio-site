@@ -7,15 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
   <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-  <script src="main.js"></script>
 </head>
 <body>
   <header>
-    <nav>
-        <div class="logo">Srikanth Karra</div>
+    <nav class="main-nav ">
+        <div class="logo"><a href="#home">Srikanth Karra</a></div>
         <div class="menu"><i class="fas fa-bars"></i></div>
     </nav>
-    <div class="showcase">
+    <div id="home" class="showcase">
       <div class="bg"></div>
       <div class="content">
         <h1>FullStack Web developer</h1>
@@ -24,13 +23,54 @@
         <a  href="#projects"><button><i class="fas fa-briefcase"></i>View my work</button></a>
       </div>
     </div>
+    <nav class="toggle-menu">
+        <ul>
+          <li><a href="#aboutme">About me</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+    
+        </ul>
+      </nav>
   </header>
+
   <section id="aboutme">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae voluptates eveniet vitae iste corporis reiciendis, odio ipsum ipsam! Natus maiores illum iste enim. Amet ab consequuntur dolor pariatur? Ea, voluptate obcaecati? Aliquid cupiditate minima alias, provident accusantium nesciunt labore illum voluptatibus esse praesentium dignissimos sunt, laudantium odio architecto! Laborum delectus debitis perspiciatis dolorum tenetur in harum dicta numquam iusto sunt voluptatum esse facilis nobis vel facere, deleniti ipsa sapiente labore corrupti voluptatibus. Beatae temporibus, unde ut et labore quas quae totam numquam iusto incidunt optio minus molestias quidem excepturi ad recusandae placeat nam illum fugiat commodi explicabo, ex facilis! Eius quam blanditiis veniam molestiae excepturi amet nisi rem facilis asperiores animi! Distinctio doloremque totam nam numquam placeat quis facere ad harum sequi repudiandae omnis aut libero, ut ullam laudantium ipsam provident tempore. Sunt et ullam assumenda suscipit molestias doloribus nesciunt magni sequi ex, doloremque totam pariatur eligendi vel ea placeat aut incidunt omnis asperiores veritatis maxime impedit alias. Laudantium iste temporibus facere asperiores sit, repellendus, inventore quibusdam harum tenetur facilis est magnam ad beatae excepturi odit earum eos quidem debitis quia non. Et, fugiat? In, tempore minus dolorem officiis ab error natus corporis, iste distinctio recusandae doloremque quasi impedit tenetur ducimus libero fugit autem placeat quo totam excepturi quidem ad. Enim eligendi eius explicabo blanditiis quibusdam nihil voluptate, fugit dolorem. Officia magni expedita recusandae nulla distinctio. Incidunt harum at suscipit doloribus assumenda deleniti debitis commodi sit, nobis deserunt dolor voluptates, veniam error consequatur modi quod! Reiciendis enim, exercitationem ea laborum tenetur recusandae accusantium fugit a aut doloremque autem, atque explicabo maxime sunt! Minima quaerat rem possimus soluta architecto. Repellendus, ipsum. Vitae, tenetur veritatis voluptatem, laborum eveniet in sapiente quas odit officiis quis praesentium aliquam! Officiis, cupiditate optio iusto consectetur voluptas quam odit doloremque dolor quos accusamus reprehenderit. Sed, sapiente temporibus.
+    <h1>About me</h1>
+    <div class="content">
+        <img class="mypic" src="mypic.jpg" width="250" height="250" alt="My picture">
+        <p class="intro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, minus aperiam. Perferendis nesciunt culpa animi dolorem ad quos, iste incidunt officiis? Repellat alias odit quam eius magnam omnis veritatis illo. Cupiditate consequatur minus sequi dolores nostrum ad nemo nesciunt quaerat nobis esse ea magnam perspiciatis aperiam fuga similique ipsum rerum, adipisci dolorum consectetur ipsam laborum enim alias aut ex. Numquam, ullam doloribus? Vero nulla beatae voluptatibus tenetur iusto ut, quidem culpa cum totam ducimus quasi adipisci exercitationem. Illo officia aspernatur dolores nulla molestiae vitae repellendus pariatur eaque assumenda quisquam architecto voluptatem, culpa neque repellat quasi ex porro omnis, quia quis.</p>
+    </div>
   </section>
-  <section id="skills"></section>
+
+  <section id="skills">
+   
+  </section>
+
   <section id="projects"></section>
-  <section id="contact"></section>
-  
+
+  <section id="contact">
+    <div class="container">
+      <h1>contact me about your offer:</h1>
+      <form action="">
+        <label for="yourname">Your Name:</label>
+        <input type="text" id="#yourname" placeholder="Your name"><br>
+        <label for="companyname">company Name:</label>
+        <input type="text" id="#companyname" placeholder="company name"><br>
+        <label for="website">Website:</label>
+        <input type="text" id="#website" placeholder="www.google.com"><br>
+        <label for="position">Looking For:</label>
+        <select id="#position">
+          <option value="Front-end">FrontEnd-WebDeveloper</option>
+          <option value="Back-end">BackEnd-WebDeveloper</option>
+          <option value="Fullstack">Fullstack-Developer</option>
+        </select><br>
+        <label for="message">Message:</label>
+        <textarea  rows="5" id="message"></textarea>
+     </form>
+    </div>
+  </section>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script src="main.js"></script> 
 </body>
 </html>
