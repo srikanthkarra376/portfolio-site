@@ -39,7 +39,6 @@ header .main-nav.scrolled {
 }
 header .main-nav.main-nav.scrolled div {
   width: 45%;
-  text-align: center;
   font-size: 1.5em;
 }
 header .main-nav.main-nav.scrolled div.logo a:hover,
@@ -57,6 +56,7 @@ header .main-nav .menu i {
   text-align: center;
   cursor: pointer;
   color: #ddd;
+  font-size: 28px;
 }
 
 header .showcase .bg {
@@ -83,6 +83,7 @@ header .showcase .content {
 header .showcase .content h1 {
   font-size: 3em;
   margin-top: 1.1em;
+  color:#40f2e1;
   text-transform: uppercase;
 }
 header .showcase .content p {
@@ -153,7 +154,7 @@ header .showcase .content button i {
   font-size:2em;
   text-decoration:none;
   color: rgb(129, 127, 127);
-  text-transform: unset;
+  text-transform: uppercase;
 }
 .toggle-menu ul li a:hover{
   transition: 0.2s;
@@ -174,11 +175,14 @@ header .showcase .content button i {
 }
 #aboutme {
   height:auto;
-  margin-top:40px;
+  margin:1.8em;
  }
 #aboutme h1 { 
   text-align: center;
   text-transform: uppercase;
+  padding-left:100px;
+  font-size:2em;
+  color:rgb(214, 24, 239);
 }
 #aboutme .content {
  display: flex; 
@@ -195,25 +199,131 @@ border-radius: 4%;
 }
 #contact {
   display: block;
-  background: #262626;
-  height: 100vh;
-  color:white;
+  background: rgba(235, 232, 232, 0.459);
+  height: auto;
+  color:0747ad;
 }
-#contact form {
-  font-size:1.2em;
+#contact > h1 {
+  text-align: center;
+  padding:30px;
+  font-size:2.2em;
+  border-bottom: 1px solid #a9a9a926;
 }
+#contact .container {
+  display: flex;
+}
+#contact .container .social {
+  width:30%;
+  text-align:center;
+  border-left:1px solid #a9a9a9a8;
+}
+#contact .container .social > h2 {
+  text-align: center;
+  font-size:1.8em;
+  padding-left:20px;
+}
+#contact .container .social ul {
+  list-style: none;
+  font-size:2.8em;
+}
+#contact .container .social ul li {
+  display: inline;
+  padding: 10px;
+}
+#contact .container .social ul li a {
+  color:rgba(38, 42, 44, 0.651);
+}
+#contact .container .social ul li a .fa-linkedin-in:hover{
+  color:#0077b5;
+  
+}
+#contact .container .social ul li a .fa-github:hover{
+  color:#262626;
+  
+}
+#contact .container .social ul li a .fa-facebook:hover{
+  color:#3b5998 ;
+  
+}
+#contact .container .social ul li a .fa-stack-overflow:hover{
+  color:#f48024;
+  
+}
+
+
+#contact .container .contact-form {
+  width:65%;
+  text-align:center;
+  
+}
+#contact .contact-form {
+  font-size:1.3em;
+}
+#contact .contact-form h2 {
+  text-align: center;
+  font-size:1.5em;
+  padding-left:-25px;
+}
+
+#contact .contact-form form .form-group{
+  display:flex;
+  padding:10px;
+  
+}
+#contact .contact-form form .form-group label {
+  width: 38%;
+  text-align: right;
+  padding: 5px 35px; 
+}
+#contact .contact-form form .form-group input,
+#contact .contact-form form .form-group select,
+#contact .contact-form form .form-group option,
+#contact .contact-form form .form-group textarea
+
+{
+  font-family: 'Rajdhani', sans-serif;
+  width: 50%;
+  text-align: left;
+  border: none;
+  outline: none;
+  padding: 8px;
+  background: #957f7f21;
+  color: #09070af5;
+  border-radius: 4px;
+  font-size:18px;
+  
+}
+#contact .contact-form form .form-group button{
+  width: 50%;
+  border-radius: 4px;
+  padding: 6px 12px;
+  outline: none;
+  border: none;
+  font-size: 25px;
+  color: #fff;
+  background: #232526;  
+  background: -webkit-linear-gradient(to left, #414345, #232526);  
+  background: linear-gradient(to left, #414345, #232526); 
+  cursor: pointer;
+  font-family: 'Rajdhani', sans-serif;
+  background: #4445469d;
+
+}
+#contact .contact-form form .form-group button:hover {
+  background: #444546fa;
+  transition:0.3s;
+
+}
+#contact .contact-form form .form-group input:focus {
+  background:rgba(187, 50, 50, 0.651);
+  color:#0076b5b4;
+  box-shadow: 1px 3px 4px grey;
+}
+#contact .contact-form form .form-group select{
+  padding-left:-10px;
+}
+
+
 #contact form input {
   display: inline;
-}
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-input[type="number"],
-textarea {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  outline: 0;
-  box-shadow: none;
 }
