@@ -198,10 +198,9 @@ border-radius: 4%;
   line-height: 1.2;
 }
 #contact {
-  display: block;
-  background: rgba(235, 232, 232, 0.459);
+  /*background: rgba(235, 232, 232, 0.459);*/
+  background: url(White.jpg);
   height: auto;
-  color:0747ad;
 }
 #contact > h1 {
   text-align: center;
@@ -211,11 +210,12 @@ border-radius: 4%;
 }
 #contact .container {
   display: flex;
+  flex-wrap: wrap;
 }
 #contact .container .social {
-  width:30%;
+  width:45%;
   text-align:center;
-  border-left:1px solid #a9a9a9a8;
+  
 }
 #contact .container .social > h2 {
   text-align: center;
@@ -252,8 +252,9 @@ border-radius: 4%;
 
 
 #contact .container .contact-form {
-  width:65%;
+  width:50%;
   text-align:center;
+  border-left:1px solid #a9a9a926;
   
 }
 #contact .contact-form {
@@ -263,7 +264,9 @@ border-radius: 4%;
   text-align: center;
   font-size:1.5em;
   padding-left:-25px;
+ 
 }
+
 
 #contact .contact-form form .form-group{
   display:flex;
@@ -312,11 +315,12 @@ border-radius: 4%;
 #contact .contact-form form .form-group button:hover {
   background: #444546fa;
   transition:0.3s;
+  box-shadow: 1px 3px 4px grey;
 
 }
 #contact .contact-form form .form-group input:focus {
-  background:rgba(187, 50, 50, 0.651);
-  color:#0076b5b4;
+  background:rgb(245, 243, 243);
+  color:#010303f8;
   box-shadow: 1px 3px 4px grey;
 }
 #contact .contact-form form .form-group select{
