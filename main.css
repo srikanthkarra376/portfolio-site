@@ -272,8 +272,6 @@ padding:3em;
 }
 #skills .container .front:hover,#skills .container .back:hover,
 #skills .container .database:hover{
-
- 
   background:#fff;
   color:rgb(10, 4, 4);
   transition: 0.5s;
@@ -282,12 +280,10 @@ padding:3em;
 #skills .container .back {
   padding:1.2em;
   color:#fff;
-  background-color: #0000008e;
+  background-color: #00000057;
   transition:0.2s;
 }
 #skills .container .back:hover{
-
-
   background:#fff;
   color:rgb(10, 4, 4);
   transition: 0.5s;
@@ -298,19 +294,7 @@ padding:3em;
   background-color: #00000057;
   transition:0.2s;
 }
-@keyframes skills-animate {
-  0% {
-    transform:scale(1.2,1.2);
-    background:#fff;
-  }
-  100% {
-    transform:scale(1.2,1.2);
-    color:rgb(10, 4, 4);
-    background:#fff;
-    transition: 0.5s;
 
-  }
-}
 
 /*projects*/
 
