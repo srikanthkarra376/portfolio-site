@@ -108,10 +108,10 @@ header .showcase .content a {
   padding-right:20px;
 }
 @keyframes logo-animate {
-  0% { color:#ccc;}
-  25% { color:rgb(18, 211, 44)}
-  0% { color:rgb(7, 15, 133)}
-  0% { color:rgb(228, 104, 33)}
+  0% { color:#fff;}
+  25% { color:rgb(129, 183, 214)}
+  0% { color:rgb(54, 57, 124)}
+  0% { color:rgba(180, 188, 214, 0.788)}
 }
 
 header .showcase .content a button {
@@ -129,6 +129,7 @@ header .showcase .content a button {
   font-family: 'Rajdhani', sans-serif;
 }
 
+
 header .showcase .content a:nth-of-type(2) button{
   padding: 8px 16px;
   outline: none;
@@ -142,6 +143,10 @@ header .showcase .content a:nth-of-type(2) button{
   cursor: pointer;
 
 }
+header .showcase .content a button:hover {
+ background: #110f0f;
+ transition: 0.3s;
+}
 
 header .showcase .content button i {
   padding:10px;
@@ -153,17 +158,17 @@ header .showcase .content button i {
 .toggle-menu.active {
   position: fixed;
   height:100vh;  
-  background: #fff;
+  background: url(./Images/White.jpg);
   width:100%;
   left:0;
   top:0;
   display: block;
   z-index: 5;
-  animation:nav-animate .5s linear;
+  animation:nav-animate .2s linear;
 }
 .toggle-menu ul {
   
-  margin-top:200px;;
+  margin-top:150px;
 }
 .toggle-menu ul li {
   padding:20px;
@@ -177,10 +182,12 @@ header .showcase .content button i {
   text-transform: uppercase;
 }
 .toggle-menu ul li a:hover{
-  transition: 0.2s;
   text-decoration: line-through;
+  transition: 0.3s;
   color:#ff5252;
-  border:2px soild #222020;
+  z-index: 1;
+  background:#ccc;
+  padding:10px 20px;
   
 }
 @keyframes nav-animate {
@@ -195,7 +202,7 @@ header .showcase .content button i {
 }
 /*about me */
 #aboutme {
-  height:800%;
+  height:600px;
   width:100%;
 }
 #aboutme h1,#heading-contact{
@@ -224,12 +231,37 @@ header .showcase .content button i {
 #aboutme .container {
 display: flex;
 flex-wrap: wrap;
-padding:3em;
+margin:0 auto;
+padding:4em;
 }
 
 #aboutme .container div.profile {
   text-align: right;
   width:30%;
+  position: relative;
+
+}
+#aboutme .container div.profile img {
+  left:-100%;
+
+}
+
+
+#aboutme .container div.profile img.loadPic {
+  animation: animate-pic 2s 3s forwards;
+  transition: 2s;
+}
+@keyframes animate-pic {
+  0% {
+   
+ left:-100%;
+  }
+  
+  100% {
+   
+   left:30%;
+  }
+  
 }
 #aboutme .container div.intro {
   text-align: left;
@@ -262,7 +294,7 @@ padding:3em;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  height: auto;
+  height: 100%;
   background: linear-gradient(rgba(47, 46, 46, 0.87), rgba(19, 19, 19, 0.89)), url(./Images/senior-front-end-developer-openings-1.gif);
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -278,12 +310,14 @@ padding:3em;
   padding:1.5em;
   color:#fff;
   background-color: #00000057;
+  height: 100%;
 }
 #skills .container .front:hover,#skills .container .back:hover,
 #skills .container .database:hover{
   background:#fff;
   color:rgb(10, 4, 4);
   transition: 0.5s;
+  height: 100%;
 
 }
 #skills .container .back {
@@ -291,17 +325,20 @@ padding:3em;
   color:#fff;
   background-color: #00000057;
   transition:0.2s;
+  height: 100%;
 }
 #skills .container .back:hover{
   background:#fff;
   color:rgb(10, 4, 4);
   transition: 0.5s;
+  height: 100%;
 }
 #skills .container .database {
 
   color:#fff;
   background-color: #00000057;
   transition:0.2s;
+  height: 100%;
 }
 
 
@@ -351,7 +388,7 @@ width:100%;
 height:100%;
 top:0;
 left:0;
-background-color:rgba(48, 57, 172, 0.657);
+background-color:rgba(48, 57, 172, 0.4);
 z-index:1;
 }
 
@@ -563,19 +600,19 @@ z-index:1;
   outline: none;
   border: none;
   font-size: 25px;
-  color: #fff;
-  background: #232526;  
-  background: -webkit-linear-gradient(to left, #414345, #232526);  
-  background: linear-gradient(to left, #414345, #232526); 
+  background: #f0e8e821;
+  color: #faf5f5f5;
   cursor: pointer;
   font-family: 'Rajdhani', sans-serif;
-  background: #444546fa;
+
 
 }
 #contact .contact-form form .form-group button:hover {
-  background: #444546fa;
+
   transition:0.3s;
-  box-shadow: 1px 3px 4px grey;
+  background: #f0e8e8b9;
+  color: #0a0909f5;
+
 
 }
 #contact .contact-form form .form-group input:focus {

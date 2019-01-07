@@ -29,6 +29,18 @@ $(function () {
       });
     });
 
+    $(document).ready(function(){
+      $(function () {
+        $(document).scroll(function () {
+          const myimg = $("#aboutme .container div.profile img");
+          const windowScroll = $(window).scrollTop();
+          if(windowScroll >500) {
+            myimg.addClass('loadPic');
+          }
+        });
+      });
+    });
+
 
  // Initialize Firebase
  var config = {
