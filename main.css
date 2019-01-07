@@ -149,7 +149,7 @@ header .showcase .content button i {
   left:0;
   top:0;
   display: block;
-  z-index: 1;
+  z-index: 5;
   animation:nav-animate .5s linear;
 }
 .toggle-menu ul {
@@ -335,6 +335,17 @@ padding:3em;
   height: 300px;
 
 }
+#projects .container .project::after {
+content:"";
+position: absolute;
+width:100%;
+height:100%;
+top:0;
+left:0;
+background-color:rgba(48, 57, 172, 0.657);
+z-index:1;
+}
+
 #projects .container .project .project-details {
   display: none;
 }
@@ -346,6 +357,7 @@ padding:3em;
   left:0;
   width:400px;
   height: 300px;
+  z-index:3;
   animation: project-animate 0.5s ease-in-out forwards ;
 }
 #projects .container .project:hover .project-details .project-links {
