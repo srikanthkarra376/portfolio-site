@@ -7,6 +7,7 @@ body{
   font-family: 'Rajdhani', sans-serif;
   position: relative;
 }
+
 header {
   position: relative;
   width:100%;
@@ -31,10 +32,11 @@ header .main-nav.scrolled {
   width: 100%;
   left: 0;
   margin-bottom:20px;
-  background: rgb(255, 255, 255);
+  background: #fff;
   color: #262626;
   z-index:2;
   transition: 0.2s;
+  height:91;
   /*box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);*/
 }
 header .main-nav.main-nav.scrolled div {
@@ -182,34 +184,135 @@ header .showcase .content button i {
   opacity:1;
   }
 }
+/*about me */
 #aboutme {
-  height:auto;
-  margin:1.8em;
- }
-#aboutme h1 { 
-  text-align: center;
-  text-transform: uppercase;
-  font-size:1.8em;
+  height:800%;
+  width:100%;
+}
+#aboutme h1,#heading-contact{
+
+  text-align:center;
+  font-size:2.2em;
   color: #a4a4ad;
+  position: relative;
+
+  }
+   
+
+#aboutme h1::after {
+
+  font-weight: 900;
+  content: "";
+  position: absolute;
+  top: 90%;
+  left: 42%;
+  margin-top: 20px;
+  width: 190px;
+  border: 2px solid #a4a4ad;
+
 }
-#aboutme .content {
- display: flex; 
- flex-wrap: wrap;
- justify-content: space-around;
+
+#aboutme .container {
+display: flex;
+flex-wrap: wrap;
+padding:3em;
 }
-#aboutme .content .mypic{
-border-radius: 4%;
+
+#aboutme .container div.profile {
+  text-align: right;
+  width:30%;
 }
-#aboutme .content .intro {
-  width:60%;
-  font-size:20px;
-  line-height: 1.2;
+#aboutme .container div.intro {
+  text-align: left;
+  width:60%; 
+  padding-left:50px;
+  
 }
+#aboutme .container div.intro p {
+  font-size:1.5em;
+}
+
+/*skills*/
+#skills {
+  width:100%;
+  margin:0 auto;
+  height:auto;
+ 
+}
+
 #skills h1 {
   text-align:center;
   font-size:2.2em;
   color: #a4a4ad;
+
+
 }
+
+#skills .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: auto;
+  background: linear-gradient(rgba(47, 46, 46, 0.87), rgba(19, 19, 19, 0.89)), url(./Images/senior-front-end-developer-openings-1.gif);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  font-size:1.5em;
+}
+#skills .container div {
+  width:30%;
+  color:#eee;
+}
+#skills .container .front,
+#skills .container .back
+ {
+  padding:1.5em;
+  color:#fff;
+  background-color: #00000057;
+}
+#skills .container .front:hover,#skills .container .back:hover,
+#skills .container .database:hover{
+
+ 
+  background:#fff;
+  color:rgb(10, 4, 4);
+  transition: 0.5s;
+
+}
+#skills .container .back {
+  padding:1.2em;
+  color:#fff;
+  background-color: #0000008e;
+  transition:0.2s;
+}
+#skills .container .back:hover{
+
+
+  background:#fff;
+  color:rgb(10, 4, 4);
+  transition: 0.5s;
+}
+#skills .container .database {
+
+  color:#fff;
+  background-color: #00000057;
+  transition:0.2s;
+}
+@keyframes skills-animate {
+  0% {
+    transform:scale(1.2,1.2);
+    background:#fff;
+  }
+  100% {
+    transform:scale(1.2,1.2);
+    color:rgb(10, 4, 4);
+    background:#fff;
+    transition: 0.5s;
+
+  }
+}
+
+/*projects*/
 
 #projects {
   width:100%;
@@ -219,6 +322,19 @@ border-radius: 4%;
   text-align:center;
   font-size:2.2em;
   color: #a4a4ad;
+  padding: 20px 0;
+  position: relative;
+}
+#projects h1::after {
+  font-weight: 900;
+  content: "";
+  position: absolute;
+  top: 90%;
+  left: 45%;
+  margin-top: 12px;
+  width: 125px;
+  border: 2px solid #a4a4ad;
+
 }
 #projects .container {
   display: grid ;
@@ -246,7 +362,7 @@ border-radius: 4%;
   left:0;
   width:400px;
   height: 300px;
-  animation: project-animate 0.2s ease-in-out forwards ;
+  animation: project-animate 0.5s ease-in-out forwards ;
 }
 #projects .container .project:hover .project-details .project-links {
   text-decoration: none;
@@ -254,22 +370,19 @@ border-radius: 4%;
   position: absolute;
   top:45%;
   left:12%;
-  animation: project-button 0.2s ease-in-out forwards ;
+  animation: project-button 0.5s ease-in-out forwards ;
 }
 #projects .container .project:hover .project-details .project-links a {
   text-decoration: none;
   padding:8px 16px;
-  background:rgba(248, 5, 5, 0.979);
-  color:#fff;
+  color:#5b5be7;
   font-size:1.1em;
-  border:2px solid rgb(233, 17, 17);
+  border:2px solid #5b5be7;
   border-radius:24px;
   z-index:99;
   
 }
-#projects .container .project .project-details .project-links a:hover {
-  transform: scale(1.1,1.1);
-}
+
 #projects .container .project:hover .project-details .project-links a i {
   font-size:1.2em;
   text-align: center;
@@ -278,39 +391,64 @@ border-radius: 4%;
 
 @keyframes project-animate {
   0% {
-  background-color: rgba(24, 22, 22, 0.123);
+  background-color: rgba(255, 255, 255, 0.575);
   opacity: 0;
   }
-  100% {
-    background-color: rgba(246, 243, 243, 0.678);
-    opacity:1;
+  33% {
+    background-color: rgba(255, 255, 255, 0.664);
+    opacity:0.3;
    }
+   55% {
+    background-color: rgba(255, 255, 255, 0.829);
+    opacity: 0.5;
+    }
+    100% {
+      background-color: rgb(255, 255, 255);
+      opacity:1;
+     }
 }
 @keyframes project-button {
   0% {
- 
+    
     opacity: 0;
-    left:-12%;
-  }
-  100% {
-    opacity:1;
-    left:12%;
-  }
-
+    }
+    33% {
+  
+      opacity:0.3;
+     }
+     55% {
+  
+      opacity: 0.5;
+      }
+      100% {
+      
+        opacity:1;
+       }
 }
+
+/*contacts*/
+
 #contact {
   width:100%;
   height: auto;
-  background:url(./Images/repeat.png);
+  background-color: #000000;
+  color:#fff;
+
+}
+#showalert {
+  text-align:center;
+  position:absolute;
+  color:#79c879;
+  margin-bottom:10px;
+  display:none;
+  width:30%;
+  left:40%;
 
 }
 #contact h1 {
   text-align: center;
-  font-size:2.2em;
+  font-size:1.8em;
   color: #a4a4ad;
-  padding:1em 0 ;
-
-  
 }
 #contact .container {
   display: flex;
@@ -322,41 +460,55 @@ border-radius: 4%;
 #contact .container .social {
   width:100%;
   text-align:center;
+  color:#fff;
+  background-color: #000000;
   
 }
 #contact .container .social h1 {
-
   text-align: center;
-  font-size: 2.5em;
-  color: #a4a4ad;
-  padding: 1em 0;
- 
+  font-size:1.8em;
+  color: #a4a4ad; 
 }
 #contact .container .social ul {
   list-style: none;
   font-size:2.8em;
+  color:#fff;
 }
 #contact .container .social ul li {
   display: inline;
   padding: 10px;
 }
 #contact .container .social ul li a {
-  color:rgba(38, 42, 44, 0.651);
+  color:#fff;
 }
 #contact .container .social ul li a .fa-linkedin-in:hover{
   color:#0077b5;
+  border-bottom:1px solid #0077b5;
+  padding-bottom:5px;
+  transition: 0.5s;
+
   
 }
 #contact .container .social ul li a .fa-github:hover{
   color:#262626;
+  border-bottom:1px solid #262626;
+  padding-bottom:5px;
+  transition: 0.5s;
   
 }
 #contact .container .social ul li a .fa-facebook:hover{
   color:#3b5998 ;
+  border-bottom:1px solid #3b5998 ;
+  padding-bottom:5px;
+  transition: 0.5s;
+ 
   
 }
 #contact .container .social ul li a .fa-stack-overflow:hover{
   color:#f48024;
+  border-bottom:1px solid #f48024;
+  padding-bottom:5px;
+  transition: 0.5s;
   
 }
 #contact .container .contact-form {
@@ -380,7 +532,6 @@ border-radius: 4%;
 }
 #contact .contact-form form .form-group input,
 #contact .contact-form form .form-group select,
-#contact .contact-form form .form-group option,
 #contact .contact-form form .form-group textarea
 
 {
@@ -390,16 +541,20 @@ border-radius: 4%;
   border: none;
   outline: none;
   padding: 8px;
-  background: #957f7f21;
-  color: #09070af5;
+  background: #f0e8e821;
+  color: #faf5f5f5;
   border-radius: 4px;
   font-size:18px;
   
 }
+#contact .contact-form form .form-group option {
+  background:#000;
+  width: 45%;
+}
 #contact .contact-form form .form-group button{
   width: 39%;
   border-radius: 4px;
-  padding: 8px;
+  padding: 6px;
   outline: none;
   border: none;
   font-size: 25px;
@@ -409,7 +564,7 @@ border-radius: 4%;
   background: linear-gradient(to left, #414345, #232526); 
   cursor: pointer;
   font-family: 'Rajdhani', sans-serif;
-  background: #4445469d;
+  background: #444546fa;
 
 }
 #contact .contact-form form .form-group button:hover {
