@@ -26,7 +26,9 @@ header .main-nav .logo a {
   text-decoration: none;
   color:#ccc;
   font-family: 'Rajdhani', sans-serif;
+  animation: logo-animate 5s infinite ease-in-out alternate-reverse;
 }
+
 header .main-nav.scrolled {
   position: fixed;
   width: 100%;
@@ -67,6 +69,7 @@ header .main-nav .menu i {
   cursor: pointer;
   color: #ddd;
   font-size: 28px;
+  animation: logo-animate 5s infinite ease-in-out alternate-reverse;
 }
 
 header .showcase .bg {
@@ -103,6 +106,12 @@ header .showcase .content p {
 }
 header .showcase .content a {
   padding-right:20px;
+}
+@keyframes logo-animate {
+  0% { color:#ccc;}
+  25% { color:rgb(18, 211, 44)}
+  0% { color:rgb(7, 15, 133)}
+  0% { color:rgb(228, 104, 33)}
 }
 
 header .showcase .content a button {
