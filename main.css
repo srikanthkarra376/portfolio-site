@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Great+Vibes');
 @import url('https://fonts.googleapis.com/css?family=Rajdhani|Sacramento');
+@import url('https://fonts.googleapis.com/css?family=Rubik');
 
 body{
   margin: 0;
   padding:0;
-  font-family: 'Rajdhani', sans-serif;
+ /* font-family: 'Rajdhani', sans-serif;*/
+ font-family: 'Rubik', sans-serif;
   position: relative;
 }
 
@@ -37,7 +39,7 @@ header .main-nav .logo a {
   font-size: 1.4em;
   color:#ccc;
   font-weight: bold;
-  font-family: 'Rajdhani', sans-serif;
+  font-family: 'Rubik', sans-serif;
   animation: logo-animate 5s infinite ease-in-out alternate-reverse;
 }
 
@@ -51,7 +53,6 @@ header .main-nav.scrolled {
   z-index:6;
   transition: 0.2s;
   height:91;
-  /*box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);*/
 }
 header .main-nav.main-nav.scrolled div {
   width: 50%;
@@ -134,7 +135,7 @@ header .showcase .content a button {
   color: #fff;
   cursor: pointer;
   border-radius: 4px;
-  font-family: 'Rajdhani', sans-serif;
+
  
 }
 
@@ -260,18 +261,24 @@ padding:4em;
 #aboutme .container div.profile {
   text-align: right;
   width:30%;
-  position: relative;
-
+}
+#aboutme .container div.profile img {
+  border-radius: 50%;
+  box-shadow: 0 0.5rem 1rem rgba(5, 4, 4, 0.561);
 }
 
 #aboutme .container div.intro {
   text-align: left;
   width:60%; 
   padding-left:50px;
+  box-shadow: #000;
+
   
 }
 #aboutme .container div.intro p {
   font-size:1.5em;
+   line-height: 2;
+   padding-left:50px;
 }
 
 /*skills*/
@@ -286,15 +293,11 @@ padding:4em;
   text-align:center;
   font-size:2.2em;
   color: #a4a4ad;
-
-
 }
-
 #skills .container {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
   height: 100%;
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -309,15 +312,19 @@ padding:4em;
 #skills .container .back,
 #skills .container .database
  {
+  
   padding:1.5em;
   color:#fff;
-  background-color: #000000;
+  background-color: #681964;
   height: 100%;
-  width:100%;
+  width:30%;
+  box-shadow: 0 0.5rem 1rem rgba(5, 4, 4, 0.66);
 }
 
 #skills .container .front:hover,#skills .container .back:hover,
 #skills .container .database:hover{
+  color:#000;
+  background: #fff;
   transition: 0.5s;
   height: 100%;
 }
@@ -331,13 +338,9 @@ padding:4em;
   height: 100%;
 }
 #skills .container .database {
-
-
   transition:0.2s;
   height: 100%;
 }
-
-
 /*projects*/
 
 #projects {
@@ -362,25 +365,19 @@ padding:4em;
   border: 2px solid #a4a4ad;
 
 }
-
-
 #projects .container {
   display: flex;
   width:100%;
   flex-wrap: wrap;
   padding:3em 0;
   justify-content: center;
-
 }
-
 #projects .container .project {
   position: relative;
   width:380px; 
   height: 300px;
   padding-top:10px;
- 
-
-}
+ }
 #projects .container .project::after {
 content:"";
 position: absolute;
@@ -388,7 +385,6 @@ width:100%;
 height:100%;
 top:0;
 left:0;
-background-color:rgba(10, 10, 12, 0.4);
 z-index:1;
 }
 
@@ -401,19 +397,21 @@ z-index:1;
   position: absolute;
   top:0;
   left:0;
-  width:400px;
+  width:380px;
   height: 300px;
   z-index:3;
+  height:100%;
   animation: project-animate 0.5s ease-in-out forwards ;
 }
-#projects .container .project:hover .project-details .project-links {
+#projects .container .project:hover .project-details .project-links{
   text-decoration: none;
   text-align:center;
   position: absolute;
   top:45%;
   left:12%;
-  animation: project-button 0.5s ease-in-out forwards ;
+  animation: project-button 0.2s ease-in-out forwards ;
 }
+
 #projects .container .project:hover .project-details .project-links a {
   text-decoration: none;
   padding:8px 16px;
@@ -425,6 +423,11 @@ z-index:1;
   z-index:99;
   
 }
+#projects .container .project:hover .project-details .project-links a:hover {
+  background-color:#e90a2f;
+  color:#fff;
+  transition:0.2s ease-in-out;
+}
 
 #projects .container .project:hover .project-details .project-links a i {
   font-size:1.2em;
@@ -434,42 +437,40 @@ z-index:1;
 
 @keyframes project-animate {
   0% {
-  background-color: rgba(255, 255, 255, 0.575);
   opacity: 0;
+  left:-10%;
   }
   33%
    {
-    background-color: rgba(255, 255, 255, 0.664);
-    opacity:0.3;
+     opacity:0.3;
    }
  55% 
  {
-    background-color: rgba(255, 255, 255, 0.829);
+    background-color: rgb(250, 244, 244);
     opacity: 0.5;
   }
  100% 
- {
-      background-color: rgb(255, 255, 255);
+ {    left:0%;
+      background-color: #fff;
       opacity:1;
+    
  }
 }
 @keyframes project-button {
   0% {
     
     opacity: 0;
-    }
-    33% {
+ }
+33% {
   
-      opacity:0.3;
-     }
-     55% {
-  
-      opacity: 0.5;
-      }
-      100% {
-      
-        opacity:1;
-       }
+  opacity:0.3;
+}
+ 55% {
+   opacity: 0.5;
+}
+100% {
+  opacity:1;
+}
 }
 
 /*contacts*/
@@ -479,6 +480,7 @@ z-index:1;
   height: auto;
   background-color: #000000;
   color:#fff;
+  clip-path: polygon(0 0%, 100% 4%, 100% 96%, 0% 100%);
 
 }
 #showalert {
@@ -497,6 +499,7 @@ z-index:1;
   color: #a4a4ad;
 }
 #contact .container {
+ 
   display: flex;
   flex-wrap: wrap;
   background-size: cover;
@@ -528,6 +531,7 @@ z-index:1;
   color:#fff;
 }
 #contact .container .social ul li a .fa-linkedin-in:hover{
+  
   color:#0077b5;
   border-bottom:1px solid #0077b5;
   padding-bottom:5px;
@@ -536,6 +540,7 @@ z-index:1;
   
 }
 #contact .container .social ul li a .fa-github:hover{
+  
   color:#262626;
   border-bottom:1px solid #262626;
   padding-bottom:5px;
@@ -543,6 +548,7 @@ z-index:1;
   
 }
 #contact .container .social ul li a .fa-facebook:hover{
+ 
   color:#3b5998 ;
   border-bottom:1px solid #3b5998 ;
   padding-bottom:5px;
@@ -551,6 +557,7 @@ z-index:1;
   
 }
 #contact .container .social ul li a .fa-stack-overflow:hover{
+  
   color:#f48024;
   border-bottom:1px solid #f48024;
   padding-bottom:5px;
@@ -558,6 +565,7 @@ z-index:1;
   
 }
 #contact .container .contact-form {
+  
   width:100%;
   text-align:center;
   border-left:1px solid #a9a9a926;
@@ -573,6 +581,7 @@ z-index:1;
   
 }
 #contact .contact-form form .form-group label {
+  
   width:30%;
   text-align:right;
   padding: 5px 35px; 
@@ -581,9 +590,7 @@ z-index:1;
 #contact .contact-form form .form-group input,
 #contact .contact-form form .form-group select,
 #contact .contact-form form .form-group textarea
-
 {
-  font-family: 'Rajdhani', sans-serif;
   width: 38%;
   text-align:left;
   border: none;
@@ -609,9 +616,6 @@ z-index:1;
   background: #f0e8e821;
   color: #faf5f5f5;
   cursor: pointer;
-  font-family: 'Rajdhani', sans-serif;
-
-
 }
 #contact .contact-form form .form-group button:hover {
 
@@ -631,6 +635,7 @@ z-index:1;
 }
 
 /*media quries */
+
 @media screen and (max-width: 768px) {
  
   header .main-nav div {
@@ -678,7 +683,7 @@ z-index:1;
     letter-spacing: 3px;
   }
   header .showcase .content p {
-    font-size: 28px;
+    font-size: 25px;
     margin-top: 1.2em;
     overflow: visible;
     text-align:left;
@@ -708,25 +713,44 @@ z-index:1;
     font-weight: bold;
 
   }
-  /* #skills .container .front ul, #skills .container .back ul, #skills .container .database ul {
-    
-    width: 100%;
-  } */
+
   #aboutme h1::after,#projects h1::after {
     left:25%;
   }
   #aboutme .container {
     padding:0;
   }
-  #aboutme .container div.profile, #aboutme .container div.intro {
+  #aboutme .container div.profile  {
     text-align: left;
     width: 100%;
     padding-left: 40px;
+   
   }
+  #aboutme .container div.profile img {
+    border-radius: 50%;
+    box-shadow: 0 0.5rem 1rem rgba(5, 4, 4, 0.561);
+  }
+  #aboutme .container div.intro p {
+    padding-left: 0;
+  }
+  #skills .container {
+    flex-wrap: wrap;
+  }
+ #skills .container .front,
+ #skills .container .back,
+ #skills .container .database
+ {
+  
+  padding:1.5em;
+  color:#fff;
+  background-color: #681964;
+  height: 100%;
+  width:100%;
+  box-shadow: 0 0.5rem 1rem rgba(5, 4, 4, 0.66);
+}
+
   #skills .container .database {
     padding:1.2em;
-    color:#fff;
-    background-color: #00000057;
     transition:0.2s;
     height: 100%;
   }
@@ -736,8 +760,9 @@ z-index:1;
   }
 #contact h1 {
     text-align: center;
+    padding-top:50px;
     font-size: 1.2em;
-    color: #a4a4ad;
+    color: #d2d2d6;
 }
 
 #contact .contact-form form .form-group label {
@@ -770,11 +795,6 @@ z-index:1;
  
 }
 #showalert {
-
-  text-align: left;
-  position: absolute;
-  color: #79c879;
-  margin-bottom: 10px;
   width: 100%;
   left:0;
   font-size: 0.8em;
