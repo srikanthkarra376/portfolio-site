@@ -19,6 +19,7 @@ header .main-nav {
   display: flex;
   justify-content: left;
   color: #f8f8f8f8;
+  flex-wrap: nowrap;
 
 }
 
@@ -191,6 +192,7 @@ header .showcase .content button i {
 .toggle-menu ul {
   
   margin-top:50px;
+  text-align: center;
 }
 .toggle-menu ul li {
   padding:20px;
@@ -198,7 +200,7 @@ header .showcase .content button i {
   text-align: center;
 }
 .toggle-menu ul li a {
-  font-size:2em;
+  font-size:1.8em;
   text-decoration:none;
   color: rgb(129, 127, 127);
   text-transform: uppercase;
@@ -209,7 +211,6 @@ header .showcase .content button i {
   color:#ff5252;
   z-index: 1;
   background:#ccc;
-  padding:10px 20px;
   
 }
 
@@ -675,16 +676,21 @@ z-index:1;
 }
 .toggle-menu.active {
  background-color:#000;
- max-width: 100%;
+
 }
 .toggle-menu ul li {
   padding:10px;
 }
+
 .toggle-menu ul li a {
-  font-size:1.5em;
+  font-size:0.9em;
   text-decoration:none;
   color: rgb(129, 127, 127);
   text-transform: uppercase;
+}
+header .main-nav.main-nav.scrolled div.logo {
+  text-align: left;
+  margin-left:0.8em;
 }
 
   
