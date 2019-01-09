@@ -68,7 +68,7 @@ function submitForm(e){
   //save values to data base
   saveMessage(name,email,message, Telephone,companyname,website,position);
   
-   document.querySelector("#showalert").style.display ="block";
+   document.querySelector("#showalert").style.display ="inline-block";
   setTimeout(function(){
     document.querySelector("#showalert").style.display ="none";
     document.getElementById('contact-me').reset(); 

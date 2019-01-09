@@ -47,7 +47,7 @@ header .main-nav.scrolled {
   left: 0;
   margin-bottom:20px;
   background: #fff;
-  color: #262626;
+  color:  #fff;
   z-index:6;
   transition: 0.2s;
   height:91;
@@ -168,7 +168,8 @@ header .showcase .content button i {
 .toggle-menu.active {
   position: fixed;
   height:100%;  
-  background: rgb(5, 3, 3);
+  background: #fff;
+  color:#262626;
   width:100%;
   left:0;
   top:0;
@@ -207,7 +208,7 @@ header .showcase .content button i {
 .toggle-menu ul li a {
   font-size:1.5em;
   text-decoration:none;
-  color:#fff;
+  color:#262626;
   font-weight: 800;
   letter-spacing:5px;
   text-transform: uppercase;
@@ -768,6 +769,17 @@ z-index:1;
   font-size: 2.2em;
  
 }
+#showalert {
+  
+  text-align: left;
+  position: absolute;
+  color: #79c879;
+  margin-bottom: 10px;
+  width: 100%;
+  font-size: 0.8em;
+  font-weight: 900;
+
+  }
   
   
 }
