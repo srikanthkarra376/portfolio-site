@@ -310,36 +310,28 @@ padding:4em;
  {
   padding:1.5em;
   color:#fff;
-  background-color: #00000057;
+  background-color: #000000;
   height: 100%;
   width:100%;
 }
 
 #skills .container .front:hover,#skills .container .back:hover,
 #skills .container .database:hover{
-  background:#fff;
-  color:rgb(10, 4, 4);
   transition: 0.5s;
   height: 100%;
-
 }
 #skills .container .back,#skills .container .database {
   padding:1.2em;
-  color:#fff;
-  background-color: #00000057;
-  transition:0.2s;
+   transition:0.2s;
   height: 100%;
 }
 #skills .container .back:hover{
-  background:#fff;
-  color:rgb(10, 4, 4);
   transition: 0.5s;
   height: 100%;
 }
 #skills .container .database {
 
-  color:#fff;
-  background-color: #00000057;
+
   transition:0.2s;
   height: 100%;
 }
@@ -384,6 +376,7 @@ padding:4em;
   position: relative;
   width:400px; 
   height: 300px;
+  padding-top:10px;
  
 
 }
@@ -575,12 +568,14 @@ z-index:1;
 #contact .contact-form form .form-group{
   display:flex;
   padding:10px;
+  flex-wrap: wrap;
   
 }
 #contact .contact-form form .form-group label {
   width:30%;
   text-align:right;
   padding: 5px 35px; 
+
 }
 #contact .contact-form form .form-group input,
 #contact .contact-form form .form-group select,
@@ -690,11 +685,15 @@ z-index:1;
   
   }
   header .main-nav div {
-    width: 50%;
-    margin: 20px;
-    text-align: center;
-    font-size: 1.3em
+    width: 100%;
    
+   
+  }
+  header .main-nav div.profile {
+    width: 70%;
+  }
+  header .main-nav div.intro {
+    width: 30%;
   }
   header .main-nav.main-nav.scrolled div.logo a {
     font-size: .9em;
@@ -732,20 +731,35 @@ z-index:1;
     font-size: 1.2em;
     color: #a4a4ad;
 }
+
 #contact .contact-form form .form-group label {
-  width: 30%;
-  font-size: 0.8em;
-  text-align: left;
- 
+  width:100%;
+  text-align:left;
+
+  
+}
+#contact .contact-form form .form-group input,
+#contact .contact-form form .form-group select,
+#contact .contact-form form .form-group textarea {
+  width:70%;
+  margin-left:35px;
 }
 #contact .contact-form form .form-group button {
   font-size:0.8em;
+  width: 75%;
+  margin-left: 35px
+}
+#contact .container .social {
+  text-align:left;
 }
 #contact .container .social h1 {
   font-size: 1.2em;
+  width: 75%;
+
 }
 #contact .container .social ul {
   font-size: 2.2em;
+ 
 }
   
   
