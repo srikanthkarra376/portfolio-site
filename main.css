@@ -28,7 +28,7 @@ header .main-nav div {
   margin: 20px;
   text-align: center;
   font-size: 2em;
-  letter-spacing: 4px;
+
  
 }
 
@@ -61,7 +61,6 @@ header .main-nav.main-nav.scrolled div.logo {
   text-align: left;
   margin-left:1.5em;
   font-weight:bold;
-  letter-spacing: 5px;
 }
 header .main-nav.main-nav.scrolled div.menu {
   text-align: right;
@@ -170,7 +169,6 @@ header .showcase .content button i {
   position: fixed;
   height:100%;  
   background: rgb(5, 3, 3);
-
   width:100%;
   left:0;
   top:0;
@@ -187,7 +185,6 @@ header .showcase .content button i {
   opacity:.2;
   }
   50% {
-
     opacity:.5;
     }
  100% {
