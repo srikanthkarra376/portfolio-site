@@ -158,20 +158,39 @@ header .showcase .content button i {
 .toggle-menu.active {
   position: fixed;
   height:100vh;  
-  background: url(./Images/White.jpg);
+  background: #000;
   background-position: center;
-  width:100%;
+  width:40%;
   left:0;
   top:0;
   display: block;
   z-index: 5;
   overflow:hidden;
-  animation:nav-animate .2s linear;
+  animation:nav-animate 1s ease-in-out;
   text-align:center;
+  transition:.5s;
+}
+@keyframes nav-animate {
+  0% {
+  left:-100%;
+  transition:.5s;
+  opacity:.2;
+  }
+  5% {
+    left:-50%;
+    transition:.5s;
+    opacity:.5;
+    }
+ 100% {
+   left:0;
+   transition:.5s;
+  
+  opacity:1;
+  }
 }
 .toggle-menu ul {
   
-  margin-top:150px;
+  margin-top:50px;
 }
 .toggle-menu ul li {
   padding:20px;
@@ -193,16 +212,7 @@ header .showcase .content button i {
   padding:10px 20px;
   
 }
-@keyframes nav-animate {
-  0% {
-  
-  opacity:.5;
-  }
- 100% {
-  
-  opacity:1;
-  }
-}
+
 /*about me */
 #aboutme {
   height:auto;
@@ -662,6 +672,19 @@ z-index:1;
   
   header .main-nav .logo a {
     font-size:25px;
+}
+.toggle-menu.active {
+ background-color:#000;
+ max-width: 100%;
+}
+.toggle-menu ul li {
+  padding:10px;
+}
+.toggle-menu ul li a {
+  font-size:1.5em;
+  text-decoration:none;
+  color: rgb(129, 127, 127);
+  text-transform: uppercase;
 }
 
   
