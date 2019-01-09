@@ -631,14 +631,26 @@ z-index:1;
 
 /*media quries */
 @media screen and (max-width: 768px) {
-  header .main-nav .logo a {
+  header .main-nav .logo  {
     text-decoration: none;
-    font-size: 1.3em; 
+    font-size: 1.1em;
   }
-  header .main-nav.main-nav.scrolled div.logo a {
+  header .main-nav div {
+    width: 100%;
+    font-size:1.8em;
+    
+  }
+  header .main-nav div.profile {
+    width: 70%;
+  }
+  header .main-nav div.intro {
+    width: 30%;
+  }
+  header .main-nav.main-nav.scrolled div.logo {
+    text-align: left;
+    margin-left: 1.5em;
     font-weight: bold;
-    font-size: 2em;
-    margin-left:0;
+    width: 70%;
   }
   header .showcase .content {
     position: absolute;
@@ -684,17 +696,7 @@ z-index:1;
     color: #f8f8f8f8;
   
   }
-  header .main-nav div {
-    width: 100%;
-   
-   
-  }
-  header .main-nav div.profile {
-    width: 70%;
-  }
-  header .main-nav div.intro {
-    width: 30%;
-  }
+
   header .main-nav.main-nav.scrolled div.logo a {
     font-size: .9em;
     font-weight: bold;
