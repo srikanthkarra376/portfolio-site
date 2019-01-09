@@ -374,7 +374,7 @@ padding:4em;
 
 #projects .container .project {
   position: relative;
-  width:400px; 
+  width:380px; 
   height: 300px;
   padding-top:10px;
  
@@ -631,14 +631,21 @@ z-index:1;
 
 /*media quries */
 @media screen and (max-width: 768px) {
-  header .main-nav .logo  {
-    text-decoration: none;
-    font-size: 1.1em;
-  }
+ 
   header .main-nav div {
-    width: 100%;
-    font-size:1.8em;
     
+    margin: 20px;
+    text-align: center;
+   
+   
+  }
+  header .main-nav div.logo  {
+    text-decoration: none;
+    font-size: 1.3em;
+    width: 70%;
+  }
+  header .main-nav div.menu {
+    width:30%;
   }
   header .main-nav div.profile {
     width: 70%;
