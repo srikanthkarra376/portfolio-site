@@ -770,12 +770,13 @@ z-index:1;
  
 }
 #showalert {
-  
+
   text-align: left;
   position: absolute;
   color: #79c879;
   margin-bottom: 10px;
   width: 100%;
+  left:0;
   font-size: 0.8em;
   font-weight: 900;
 
