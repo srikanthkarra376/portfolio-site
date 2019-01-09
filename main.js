@@ -8,7 +8,7 @@ $(document).ready(function(){
 $(function () {
   $(document).scroll(function () {
     let nav = $("header .main-nav");
-    nav.delay(2000).toggleClass('scrolled', $(this).scrollTop()>91);
+    nav.toggleClass('scrolled', $(this).scrollTop()>91);
   });
 });
 

@@ -20,12 +20,22 @@ header .main-nav {
   justify-content: left;
   color: #f8f8f8f8;
   flex-wrap: nowrap;
+  font-weight: bold;
 
+}
+header .main-nav div {
+  width: 50%;
+  margin: 20px;
+  text-align: center;
+  font-size: 2em;
+ 
 }
 
 header .main-nav .logo a {
   text-decoration: none;
+  font-size: 1.4em;
   color:#ccc;
+  font-weight: bold;
   font-family: 'Rajdhani', sans-serif;
   animation: logo-animate 5s infinite ease-in-out alternate-reverse;
 }
@@ -43,28 +53,24 @@ header .main-nav.scrolled {
   /*box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);*/
 }
 header .main-nav.main-nav.scrolled div {
-  width: 45%;
+  width: 50%;
   font-size: 1.5em;
 }
 header .main-nav.main-nav.scrolled div.logo {
   text-align: left;
   margin-left:1.5em;
+  font-weight:bold;
 }
 header .main-nav.main-nav.scrolled div.menu {
   text-align: right;
   padding-right:50px;
+  font-size: 1.4em;
 }
 header .main-nav.main-nav.scrolled div.logo a:hover,
 header .main-nav.main-nav.scrolled div.menu i:hover {
   color:#262626;
 }
 
-header .main-nav div {
-  width: 50%;
-  margin: 20px;
-  text-align: center;
-  font-size: 2.8em;
-}
 header .main-nav .menu i {
   justify-content: flex-end;
   cursor: pointer;
@@ -116,7 +122,7 @@ header .showcase .content a {
 }
 
 header .showcase .content a button {
-  padding: 10px 20px;
+  padding: 8px 16px;
   outline: none;
   border: none;
   font-size: 25px;
@@ -128,6 +134,7 @@ header .showcase .content a button {
   cursor: pointer;
   border-radius: 4px;
   font-family: 'Rajdhani', sans-serif;
+  widows: 100%;
 }
 
 
@@ -142,6 +149,7 @@ header .showcase .content a:nth-of-type(2) button{
   background: linear-gradient(to left, #48b1bf, #06beb6); 
   color: #fff;
   cursor: pointer;
+  widows: 100%;
 
 }
 header .showcase .content a button:hover {
@@ -158,9 +166,9 @@ header .showcase .content button i {
 }
 .toggle-menu.active {
   position: fixed;
-  height:100vh;  
-  background: #fff;
-  background-position: center;
+  height:100%;  
+  background: rgb(5, 3, 3);
+
   width:100%;
   left:0;
   top:0;
@@ -168,7 +176,6 @@ header .showcase .content button i {
   z-index: 5;
   overflow:hidden;
   animation:nav-animate 1s ease-in-out;
-  text-align:center;
   transition:.5s;
 }
 @keyframes nav-animate {
@@ -189,19 +196,20 @@ header .showcase .content button i {
   }
 }
 .toggle-menu ul {
-  
-  margin-top:50px;
+  padding:0;
+  margin-top: 150px;
   text-align: center;
 }
 .toggle-menu ul li {
-  padding:20px;
+  padding-top: 15px;
   list-style: none;
-  text-align: center;
+  
 }
 .toggle-menu ul li a {
-  font-size:1.8em;
+  font-size:1.5em;
   text-decoration:none;
-  color: rgb(129, 127, 127);
+  color:#fff;
+  font-weight: 800;
   text-transform: uppercase;
 }
 .toggle-menu ul li a:hover{
@@ -255,22 +263,6 @@ padding:4em;
 
 }
 
-#aboutme .container div.profile img.loadPic {
-  animation: animate-pic 2s 3s forwards;
-  transition: 2s;
-}
-@keyframes animate-pic {
-  0% {
-   
- left:-100%;
-  }
-  
-  100% {
-   
-   left:30%;
-  }
-  
-}
 #aboutme .container div.intro {
   text-align: left;
   width:60%; 
@@ -303,23 +295,26 @@ padding:4em;
   align-items: center;
   flex-wrap: wrap;
   height: 100%;
-  background: linear-gradient(rgba(47, 46, 46, 0.87), rgba(19, 19, 19, 0.89)), url(./Images/senior-front-end-developer-openings-1.gif);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   font-size:1.5em;
 }
 #skills .container div {
-  width:30%;
+  width:100%;
   color:#eee;
 }
+
 #skills .container .front,
-#skills .container .back
+#skills .container .back,
+#skills .container .database
  {
   padding:1.5em;
   color:#fff;
   background-color: #00000057;
   height: 100%;
+  width:100%;
 }
+
 #skills .container .front:hover,#skills .container .back:hover,
 #skills .container .database:hover{
   background:#fff;
@@ -328,7 +323,7 @@ padding:4em;
   height: 100%;
 
 }
-#skills .container .back {
+#skills .container .back,#skills .container .database {
   padding:1.2em;
   color:#fff;
   background-color: #00000057;
@@ -641,16 +636,26 @@ z-index:1;
 
 /*media quries */
 @media screen and (max-width: 768px) {
+  header .main-nav .logo a {
+    text-decoration: none;
+    font-size: 1.3em; 
+  }
+  header .main-nav.main-nav.scrolled div.logo a {
+    font-weight: bold;
+    font-size: 2em;
+    margin-left:0;
+  }
   header .showcase .content {
     position: absolute;
     z-index: 1;
     color: #fff;
+    top:10%;
     height: 800px;
   
   }
 
   header .showcase .content h1 {
-    font-size: 2em;
+    font-size: 1.5em;
     margin-top: 1.1em;
     color:#40f2e1;
     text-transform: uppercase;
@@ -659,7 +664,22 @@ z-index:1;
     font-size: 28px;
     margin-top: 1.2em;
     overflow: visible;
+    text-align:left;
   }
+  header .showcase .content button {
+    padding: 8px 16px;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    background: #7F00FF;
+    background: -webkit-linear-gradient(to left, #d618ef, #7f6599);
+    background: linear-gradient(to left, #d618ef, #7f6599);
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+    font-family: 'Rajdhani', sans-serif
+  }
+
   header .showcase .content a {
     padding-right:20px;
   }
@@ -669,14 +689,64 @@ z-index:1;
     color: #f8f8f8f8;
   
   }
-  
+  header .main-nav div {
+    width: 50%;
+    margin: 20px;
+    text-align: center;
+    font-size: 1.3em
+   
+  }
+  header .main-nav.main-nav.scrolled div.logo a {
+    font-size: .9em;
+    font-weight: bold;
 
-
-
-header .main-nav.main-nav.scrolled div.logo {
-  text-align: left;
-  margin-left:0.5em;
+  }
+  /* #skills .container .front ul, #skills .container .back ul, #skills .container .database ul {
+    
+    width: 100%;
+  } */
+  #aboutme h1::after,#projects h1::after {
+    left:25%;
+  }
+  #aboutme .container {
+    padding:0;
+  }
+  #aboutme .container div.profile, #aboutme .container div.intro {
+    text-align: left;
+    width: 100%;
+    padding-left: 40px;
+  }
+  #skills .container .database {
+    padding:1.2em;
+    color:#fff;
+    background-color: #00000057;
+    transition:0.2s;
+    height: 100%;
+  }
+ 
+  #projects h1::after {
+    left:35%;
+  }
+#contact h1 {
+    text-align: center;
+    font-size: 1.2em;
+    color: #a4a4ad;
 }
-
+#contact .contact-form form .form-group label {
+  width: 30%;
+  font-size: 0.8em;
+  text-align: left;
+ 
+}
+#contact .contact-form form .form-group button {
+  font-size:0.8em;
+}
+#contact .container .social h1 {
+  font-size: 1.2em;
+}
+#contact .container .social ul {
+  font-size: 2.2em;
+}
+  
   
 }
