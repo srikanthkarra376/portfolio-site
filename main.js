@@ -1,6 +1,6 @@
 $(document).ready(function(){
   $("header .main-nav .menu i,.toggle-menu ul li a,header .main-nav.scrolled .menu i").click(function(){
-    $("header .main-nav .menu i").toggleClass("fa-times-circle");
+    $("header .main-nav .menu i").delay(1000).toggleClass("fa-times-circle");
     $(".toggle-menu").toggleClass("active");
   });
 });
@@ -8,7 +8,7 @@ $(document).ready(function(){
 $(function () {
   $(document).scroll(function () {
     let nav = $("header .main-nav");
-    nav.toggleClass('scrolled', $(this).scrollTop()>91);
+    nav.delay(2000).toggleClass('scrolled', $(this).scrollTop()>91);
   });
 });
 
@@ -29,17 +29,6 @@ $(function () {
       });
     });
 
-    $(document).ready(function(){
-      $(function () {
-        $(document).scroll(function () {
-          const myimg = $("#aboutme .container div.profile img");
-          const windowScroll = $(window).scrollTop();
-          if(windowScroll >500) {
-            myimg.addClass('loadPic');
-          }
-        });
-      });
-    });
 
 
  // Initialize Firebase

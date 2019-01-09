@@ -37,7 +37,7 @@ header .main-nav.scrolled {
   margin-bottom:20px;
   background: #fff;
   color: #262626;
-  z-index:2;
+  z-index:6;
   transition: 0.2s;
   height:91;
   /*box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);*/
@@ -159,9 +159,9 @@ header .showcase .content button i {
 .toggle-menu.active {
   position: fixed;
   height:100vh;  
-  background: #000;
+  background: #fff;
   background-position: center;
-  width:40%;
+  width:100%;
   left:0;
   top:0;
   display: block;
@@ -177,9 +177,8 @@ header .showcase .content button i {
   transition:.5s;
   opacity:.2;
   }
-  5% {
-    left:-50%;
-    transition:.5s;
+  50% {
+
     opacity:.5;
     }
  100% {
@@ -671,26 +670,12 @@ z-index:1;
   
   }
   
-  header .main-nav .logo a {
-    font-size:25px;
-}
-.toggle-menu.active {
- background-color:#000;
 
-}
-.toggle-menu ul li {
-  padding:10px;
-}
 
-.toggle-menu ul li a {
-  font-size:0.9em;
-  text-decoration:none;
-  color: rgb(129, 127, 127);
-  text-transform: uppercase;
-}
+
 header .main-nav.main-nav.scrolled div.logo {
   text-align: left;
-  margin-left:0.8em;
+  margin-left:0.5em;
 }
 
   
