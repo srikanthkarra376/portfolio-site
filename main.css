@@ -738,7 +738,6 @@ opacity:1;
     font-size: 25px;
     margin-top: 1.2em;
     overflow: visible;
-    text-align:left;
     line-height: 1;
   }
   header .showcase .content button {
@@ -776,6 +775,7 @@ opacity:1;
     text-align: left;
     width: 100%;
     padding-left: 40px;
+    margin: 30px;
    
   }
   #aboutme .container div.profile img {
@@ -784,6 +784,7 @@ opacity:1;
   }
   #aboutme .container div.intro p {
     padding-left: 0;
+    text-align:center;
   }
   #skills .container {
     flex-wrap: wrap;
