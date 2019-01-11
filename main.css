@@ -9,6 +9,18 @@ body{
  font-family: 'Rubik', sans-serif;
   position: relative;
 }
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+/* optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
 
 header {
   position: relative;
@@ -53,6 +65,7 @@ header .main-nav.scrolled {
   z-index:6;
   transition: 0.2s;
   height:91;
+  animation:scrolled-nav-animate .5s ease-in forwards;
 }
 header .main-nav.main-nav.scrolled div {
   width: 50%;
@@ -178,29 +191,57 @@ header .showcase .content button i {
   display: block;
   z-index: 5;
   overflow:hidden;
-  animation:nav-animate 1s ease-in-out;
-  transition:.5s;
+  animation:nav-animate .5s  ease-in-out;
+ 
+}
+body.add-Opacity {
+  animation: add-opacity-body 2s  ease-in-out ;
+ 
+}
+@keyframes  add-opacity-body {
+  0% {
+    opacity:0;
+    }
+  50% {
+      opacity:0;
+      }
+    100%{
+    
+     opacity:1;
+    }
 }
 @keyframes nav-animate {
   0% {
   left:-100%;
-  transition:.5s;
-  opacity:.2;
+   opacity:0;
   }
-  50% {
-    opacity:.5;
-    }
- 100% {
+  100%{
    left:0;
-   transition:.5s;
-  
-  opacity:1;
+   opacity:1;
   }
 }
 .toggle-menu ul {
   padding:0;
   margin-top: 150px;
   text-align: center;
+  animation: menu-animate 0.8s ease-in-out forwards;
+  animation-delay: .6s;
+  opacity:0;
+ 
+} 
+@keyframes menu-animate {
+0% {
+
+ opacity:0;
+ margin-top: 0;
+}
+
+100% {
+  margin-top:150px;
+  opacity:1;
+
+  }
+
 }
 .toggle-menu ul li {
   padding-top: 30px;
@@ -210,17 +251,18 @@ header .showcase .content button i {
 .toggle-menu ul li a {
   font-size:1.5em;
   text-decoration:none;
-  color:#262626;
+  color:#161515;
   font-weight: 800;
   letter-spacing:5px;
+  padding:10px 20px;
   text-transform: uppercase;
 }
 .toggle-menu ul li a:hover{
   text-decoration: line-through;
   transition: 0.3s;
-  color:#ff5252;
+  color:#fff;
   z-index: 1;
-  background:#ccc;
+  background:rgb(224, 14, 14);  
   
 }
 

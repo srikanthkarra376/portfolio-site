@@ -1,9 +1,13 @@
 $(document).ready(function(){
   $("header .main-nav .menu i,.toggle-menu ul li a,header .main-nav.scrolled .menu i").click(function(){
-    $("header .main-nav .menu i").delay(1000).toggleClass("fa-times-circle");
+    $("header .main-nav .menu i").toggleClass("fa-times-circle");
     $(".toggle-menu").toggleClass("active");
   });
 });
+$(".toggle-menu ul li a").click(function(){
+  $('html,body').toggleClass("add-Opacity");
+});
+
 
 $(function () {
   $(document).scroll(function () {
@@ -21,7 +25,7 @@ $(function () {
             $target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
             if ($target.length) {
                 var targetOffset = $target.offset().top;
-                $('html,body').animate({scrollTop: targetOffset - 91}, 1000);
+                $('html,body').animate({scrollTop: targetOffset - 91,}, 1000);
                 return false;
 
             }
