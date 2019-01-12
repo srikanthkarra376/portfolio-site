@@ -5,8 +5,7 @@
 body{
   margin: 0;
   padding:0;
- /* font-family: 'Rajdhani', sans-serif;*/
- font-family: 'Rubik', sans-serif;
+  font-family: 'Rubik', sans-serif;
   position: relative;
 }
 html {
@@ -14,10 +13,9 @@ html {
     overflow-x: hidden;
 }
 ::-webkit-scrollbar {
-    width: 0px;  /* remove scrollbar space */
-    background: transparent;  /* optional: just make scrollbar invisible */
+    width: 0px;  
+    background: transparent;  
 }
-/* optional: show position indicator in red */
 ::-webkit-scrollbar-thumb {
     background: #FF0000;
 }
@@ -166,7 +164,6 @@ header .showcase .content a:nth-of-type(2) button{
 }
 header .showcase .content a button:hover {
  color:rgba(204, 204, 204, 0.356);
- 
  transition: 0.3s;
  transform: scale(1.1,1).1;
  transition: 0.2s;
@@ -276,24 +273,14 @@ body.add-Opacity {
 
   text-align:center;
   font-size:2.2em;
-  color: #a4a4ad;
   position: relative;
-
+  width:180px;
+  margin:50px auto;
+  color: #673AB7;
+  background-image: linear-gradient(0deg, rgba(115, 128, 135, 0.3) 50%, transparent 50%);
+ 
   }
    
-
-#aboutme h1::after {
-
-  font-weight: 900;
-  content: "";
-  position: absolute;
-  top: 90%;
-  left: 42%;
-  margin-top: 20px;
-  width: 190px;
-  border: 2px solid #a4a4ad;
-
-}
 
 #aboutme .container {
 display: flex;
@@ -338,7 +325,11 @@ padding:4em;
 #skills h1 {
   text-align:center;
   font-size:2.2em;
-  color: #a4a4ad;
+  color: #673AB7;
+  width:165px;
+  margin:50px auto;
+  text-transform: uppercase;
+  background-image: linear-gradient(0deg, rgba(115, 128, 135, 0.3) 50%, transparent 50%);
 }
 #skills .container {
   display: flex;
@@ -397,20 +388,14 @@ padding:4em;
   text-align:center;
   font-size:2.2em;
   color: #a4a4ad;
-  padding: 20px 0;
   position: relative;
+  width:185px;
+  margin:50px auto;
+  color: #673AB7;
+  text-transform: uppercase;
+  background-image: linear-gradient(0deg, rgba(115, 128, 135, 0.3) 50%, transparent 50%);
 }
-#projects h1::after {
-  font-weight: 900;
-  content: "";
-  position: absolute;
-  top: 90%;
-  left: 45%;
-  margin-top: 12px;
-  width: 125px;
-  border: 2px solid #a4a4ad;
 
-}
 #projects .container {
   display: flex;
   width:100%;
@@ -543,7 +528,19 @@ opacity:1;
   left:40%;
 
 }
-#contact h1 {
+#above-contact {
+  text-align:center;
+  font-size:2.2em;
+  color: #a4a4ad;
+  position: relative;
+  width:220px;
+  margin:50px auto;
+  color: #673AB7;
+  text-transform: uppercase;
+  background-image: linear-gradient(0deg, rgba(115, 128, 135, 0.3) 50%, transparent 50%);
+
+}
+#contact > h1 {
   text-align: center;
   font-size:1.8em;
   color: #a4a4ad;
