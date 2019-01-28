@@ -64,6 +64,7 @@ header .main-nav.scrolled {
   transition: 0.2s;
   height:91;
   animation:scrolled-nav-animate .5s ease-in forwards;
+  box-shadow: 0 4px 12px 0 rgba(0,0,0,.05)!important;
 }
 header .main-nav.main-nav.scrolled div {
   width: 50%;
