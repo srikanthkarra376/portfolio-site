@@ -181,7 +181,7 @@ header .showcase .content button i {
 .toggle-menu.active {
   position: fixed;
   height:100%;  
-  background: #fff;
+  background:rgba(245,245,245,0.88);
   color:#262626;
   width:100%;
   left:0;
