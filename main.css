@@ -362,7 +362,7 @@ padding:4em;
 #skills .container .front:hover,#skills .container .back:hover,
 #skills .container .database:hover{
   color:#000;
-  background: #fff;
+  background:rgba(245,245,245,0.88);
   transition: 0.5s;
   height: 100%;
 }
