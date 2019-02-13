@@ -410,13 +410,14 @@ padding:4em;
   width:380px; 
   height: 300px;
   padding-top:10px;
+  cursor: pointer;
  
  }
 #projects .container .project::after {
 content:"";
 position: absolute;
 width:100%;
-height:100%;
+height:auto;
 top:0;
 left:0;
 z-index:1;
@@ -435,22 +436,23 @@ z-index:1;
   height: 300px;
   z-index:3;
   height:100%;
-  animation: project-animate 0.5s ease-in-out forwards ;
+  animation: project-animate 0.4s ease-in forwards ;
 }
 #projects .container .project:hover .project-details .project-links{
   text-decoration: none;
   text-align:center;
   position: absolute;
-  top:47%;
+  top:50%;
   left:12%;
-  animation: project-animate 1s ease-in-out forwards ;
+  opacity:0;
+  animation: project-animate .5s ease-out forwards ;
 }
 
 #projects .container .project:hover .project-details .project-links a {
   text-decoration: none;
-  padding:8px 16px;
+  padding:7px 14px;
   color:#e90a2f;
-  font-size:1.1em;
+  font-size:.8em;
   border:2px solid #e90a2f;
   border-radius:24px;
   font-weight: bold;
@@ -474,21 +476,25 @@ z-index:1;
 @keyframes project-animate {
   0% {
   opacity: 0;
-  background-color: rgba(248, 240, 240, 0.288);
+  background-color: rgba(14, 10, 10, 0.288);
   transform:scale(0,0);
   position: absolute;
    }
   33%
    {
-     opacity:0.3;
-     transform:scale(0.3,0.3);
+     top:-100%;
+     opacity:0;
+     z-index: -1;
+     /*transform:scale(0.3,0.3);*/
    }
 
  100% 
- {    
+ {   
+  
+  z-index: 1;
   transform:scale(1,1);
-  background-color: #fff;
-opacity:1;
+  background-color: rgb(8, 8, 8);
+  opacity:1;
     
  }
 }
