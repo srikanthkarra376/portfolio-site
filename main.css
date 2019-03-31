@@ -304,15 +304,26 @@ padding:4em;
 #aboutme .container div.intro {
   text-align: left;
   width:60%; 
-  padding-left:50px;
+  margin-left:50px;
   box-shadow: #000;
 
   
 }
+
 #aboutme .container div.intro p {
   font-size:1.5em;
    line-height: 2;
-   padding-left:50px;
+   margin-left:50px;
+}
+
+.bd-callout {
+   background-color: #f7f7f9;
+    border: 1px solid #eee;
+    border-left-width: .25rem;
+    border-radius: .25rem
+}
+.bd-callout-warning {
+  border-left-color: #f0ad4e
 }
 
 /*skills*/
@@ -384,12 +395,14 @@ padding:4em;
 #projects {
   width:100%;
   height: 100%;
+  background-color:#eeee;
 }
 #projects h1 {
   text-align:center;
   font-size:2.2em;
   color: #a4a4ad;
   position: relative;
+  
   width:185px;
   margin:50px auto;
   color: #673AB7;
@@ -433,10 +446,10 @@ z-index:1;
   top:0;
   left:0;
   width:380px;
-  height: 300px;
+  height: 280px;
   z-index:3;
   height:100%;
-  animation: project-animate 0.4s ease-in forwards ;
+  animation: project-animate 0.3s ease-in forwards ;
 }
 #projects .container .project:hover .project-details .project-links{
   text-decoration: none;
@@ -451,20 +464,20 @@ z-index:1;
 #projects .container .project:hover .project-details .project-links a {
   text-decoration: none;
   padding:7px 14px;
-  color:#e90a2f;
+  color:#ece4e5;
   font-size:.8em;
-  border:2px solid #e90a2f;
+  border:2px solid #cecece;
   border-radius:24px;
   font-weight: bold;
   z-index:99;
   
 }
 #projects .container .project:hover .project-details .project-links a:hover {
-  background-color:#e90a2f;
-  color:#fff;
+  background-color:#ecebeb;
+  color:rgb(16, 89, 206);
   transition:0.2s ease-in-out;
   width:100%;
-  height:100%;
+  height:80%;
 }
 
 #projects .container .project:hover .project-details .project-links a i {
@@ -476,25 +489,24 @@ z-index:1;
 @keyframes project-animate {
   0% {
   opacity: 0;
-  background-color: rgba(14, 10, 10, 0.288);
+  background-color: rgba(31, 92, 192, 0.288);
   transform:scale(0,0);
-  position: absolute;
-   }
+  z-index:-4;
+  }
   33%
    {
-     top:-100%;
+     left:-100%;
      opacity:0;
-     z-index: -1;
-     /*transform:scale(0.3,0.3);*/
+     z-index: -3;
+     transform:scale(0.3,0.3);
    }
 
  100% 
  {   
-  
-  z-index: 1;
   transform:scale(1,1);
-  background-color: rgb(8, 8, 8);
+  background-color: rgb(31, 93, 192);
   opacity:1;
+  z-index: 1;
     
  }
 }
@@ -505,7 +517,7 @@ z-index:1;
  }
 33% {
   
-  opacity:0.3;
+  opacity:0;
 }
  55% {
    opacity: 0.5;
@@ -520,7 +532,7 @@ z-index:1;
 #contact {
   width:100%;
   height: auto;
-  background-color: #000000;
+  background-color: #333;
   color:#fff;
   clip-path: polygon(0 0%, 100% 4%, 100% 96%, 0% 100%);
 
